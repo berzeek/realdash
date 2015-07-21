@@ -21,4 +21,6 @@ Route::get('logout', array('uses' => 'HomeController@doLogout'));
 
 Route::get('dash', function(){ return View::make('dash');});
 
-Route::get('leads', function(){ return View::make('leads');});
+Route::controller('leads', 'LeadsController');
+
+//Route::get('admin', function () {return View::make('admin');});
