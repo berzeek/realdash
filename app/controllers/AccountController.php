@@ -21,7 +21,7 @@ class AccountController extends BaseController {
       // doing login.
       if (Auth::validate($userdata)) {
         if (Auth::attempt($userdata)) {
-          return Redirect::intended('/');
+          return Redirect::intended('/dash');
         }
       }
       else {
