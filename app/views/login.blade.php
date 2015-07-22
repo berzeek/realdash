@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
+<title>RealDash Login</title>
 <head>
-
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper">
 {{ Form::open(array('url' => 'login', 'class' => 'form-signin')) }}
-<h2 class="form-signin-heading">Please login</h2>
+<h2 class="form-signin-heading"><i class='fa fa-lock'></i> Please login</h2>
 @if(Session::has('error'))
 <div class="alert-box success">
   <h2>{{ Session::get('error') }}</h2>
@@ -29,10 +30,12 @@
 body {
 	background: #eee !important;
 }
+
 .wrapper {
   margin-top: 80px;
   margin-bottom: 80px;
 }
+
 .form-signin {
   max-width: 380px;
   padding: 15px 35px 45px;
@@ -45,6 +48,15 @@ body {
 	  margin-bottom: 30px;
 	}
 
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+
+  .form-signin .form-control:focus {
+  z-index: 2;
+
+  }
+  
 	.form-control span6 {
 	  position: relative;
 	  font-size: 16px;
