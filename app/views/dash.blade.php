@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>LT</span>
+          <span class="logo-mini"><b>R</b>D</span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>Real</b>Dash</span>
         </a>
@@ -180,10 +180,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
-                    <img src="{{ asset("/bower_components/admin-lte/dist/img/user2-160x160.jpg") }}" class="img-circle" alt="User Image" />
-                    <p>
-                      \\ TODO Put user's name
-                    </p>
                   </li>
                   <!-- Menu Body -->
                   <li class="user-body">
@@ -194,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <a href="#" class="btn btn-default btn-flat">Account</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="{{ URL::to('logout') }}" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -246,9 +242,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
-            Manage Leads
-          </h1>
+          <h1>Dash Overview</h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i>Dashboard</a></li>
             <li class="active">Leads</li>
@@ -267,7 +261,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <footer class="main-footer">
         <!-- To the right -->
         <div class="pull-right hidden-xs">
-          Anything you want
         </div>
         <!-- Default to the left -->
         <strong>Copyright &copy; 2015 <a href="#">Zeek Technology</a>.</strong> All rights reserved.
@@ -347,7 +340,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="{{ asset("/bower_components/admin-lte/dist/js/app.min.js")}}" type="text/javascript"></script>
 
     <script type="text/template" id="leadsTableTemplate">
-      <h1>Manage Leads</h1>
       <table>
           <thead>
           <tr>
