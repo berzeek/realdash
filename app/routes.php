@@ -11,13 +11,14 @@
 |
 */
 
-// route to show the login form
-Route::get('login', array('uses' => 'HomeController@showLogin'));
+// GET route
+Route::get('login', function() {
+  return View::make('login');
+});
+//POST route
+Route::post('login', 'AccountController@login');
 
-// route to process the form
-Route::post('login', array('uses' => 'HomeController@doLogin'));
-
-Route::get('logout', array('uses' => 'HomeController@doLogout'));
+Route::get('logout', array('uses' => 'AccountController@logout'));
 
 Route::get('dash', function(){ return View::make('dash');});
 

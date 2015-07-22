@@ -1,29 +1,37 @@
-<!-- app/views/login.blade.php -->
 <!doctype html>
 <html>
 <head>
-<title>RealDash Login</title>
+
 </head>
 <body>
-
+  <div class="wrapper">
 {{ Form::open(array('url' => 'login')) }}
 <h1>Login</h1>
-
-<!-- if there are login errors, show them here -->
-<p>
-    {{ $errors->first('username') }}
-    {{ $errors->first('password') }}
-</p>
-
-<p>
-    {{ Form::label('username', 'Username') }}
-    {{ Form::text('username', Input::old('username')) }}
-</p>
-
-<p>
-    {{ Form::label('password', 'Password') }}
-    {{ Form::password('password') }}
-</p>
-
-<p>{{ Form::submit('Login') }}</p>
+@if(Session::has('error'))
+<div class="alert-box success">
+  <h2>{{ Session::get('error') }}</h2>
+</div>
+@endif
+<div class="controls">
+{{ Form::text('email','',array('id'=>'','class'=>'form-control span6','placeholder' => 'Please Enter your Email')) }}
+<p class="errors">{{$errors->first('email')}}</p>
+</div>
+<div class="controls">
+{{ Form::password('password',array('class'=>'form-control span6', 'placeholder' => 'Please Enter your Password')) }}
+<p class="errors">{{$errors->first('password')}}</p>
+</div>
+<p>{{ Form::submit('Login', array('class'=>'send-btn')) }}</p>
 {{ Form::close() }}
+
+</div>
+<style>
+body {
+	background: #eee !important;
+}
+.wrapper {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+</style>
+</body>
+</html>

@@ -9,11 +9,10 @@ public function run()
 {
     DB::table('users')->delete();
     User::create(array(
-        'user_id'     => '1',
-        'username' => 'berzeek',
-        'first_name'    => 'Brandon',
-        'last_name'    => 'Zeek',
-        'remember_token' => Hash::make('password'),
+      'name'     => 'Brandon Zeek',
+      'username' => 'berzeek',
+      'email'    => 'brandon.zeek1@gmail.com',
+      'password' => Hash::make('password'),
     ));
 }
 
