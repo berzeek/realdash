@@ -4,6 +4,17 @@ $(document).ready(function(){
         });
 
 // View Functions
+$('#intel-button').click(function() {
+  alert('button works');
+});
+
+
+
+
+
+
+
+
 var LD {
   function getLeads(){
     $.post("leads/userleads", function( data ){

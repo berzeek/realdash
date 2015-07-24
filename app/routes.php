@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/public/', function(){ return View::make('dash.dash');});
+
 // GET route
 Route::get('login', function() {
   return View::make('login');
@@ -20,7 +22,9 @@ Route::post('login', 'AccountController@login');
 
 Route::get('logout', array('uses' => 'AccountController@logout'));
 
-Route::get('dash', function(){ return View::make('dash');});
+Route::get('dash', function(){ return View::make('dash.dash');});
+
+Route::controller('customers', 'CustomerController');
 
 Route::controller('leads', 'LeadsController');
 
