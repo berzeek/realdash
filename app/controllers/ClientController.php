@@ -1,6 +1,6 @@
 <?php
 
-class ClientController extends Controller {
+class ClientController extends BaseController {
 
     public function getIndex() {
         $id = Input::get('id');

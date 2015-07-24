@@ -178,7 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">{{Auth::user()->name;}}</span>
+                  <span class="hidden-xs"></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
@@ -225,7 +225,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
-            <li class="header">HEADER</li>
+            <li class="header"></li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="#" id="dash-view-button"><i class="fa fa-link"></i> <span>Dash</span></a></li>
             <li><a href="#" id="intel-view-button"><i class="fa fa-link"></i> <span>Intel</span></a></li>
